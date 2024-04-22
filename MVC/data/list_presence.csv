@@ -1,0 +1,14 @@
+id,matricule,nom,prenom,telephone,referentiel,heure_arrive,status
+6,P6_DEVDAT_2024_119,seydina,mhd,799997777,DEV/WEB,777777777,present
+6,P6_DEVDAT_2024_119,seydina,mhd,7777777777,AWS,8h:00,absent
+5,P5_DEVDAT_2024_119,Saer,Mbow,7777777777,DEV DATA,8h:00,absent
+5,P5_DEVDAT_2024_119,Aladji,Fall,7777777777,DEV DATA,8h:00,absent
+4,P4_DEVDAT_2024_119,BayeSaer,Mbow,7777777777,Hackeuse,8h:00,absent
+4,P4_DEVDAT_2024_119,Issa,Fall,7777777777,Hackeuse,8h:00,present
+3,P3_DEVDAT_2024_119,Saer,Mbow,7777777777,DEV DATA,8h:00,absent
+3,P3_DEVDAT_2024_119,mreukh,mhsssd,7777777777,DEV DATA,8h:00,absent
+2,P1_DEVDAT_2024_119,mrepppukh,mhsssd,7777777777,Réferent Digital,8h:00,absent
+2,P1_DEVDAT_2024_119,mreukh,mhsssd,7777777777,Réferent Digital,8h:00,present
+1,P2_DEVDAT_2024_119,mrepppukh,mhsssd,7777777777,DEVWEB/Mobile,8h:00,absent
+1,P2_DEVDAT_2024_119,mreukh,mhsssd,7777777777,DEVWEB/Mobile,8h:00,absent
+

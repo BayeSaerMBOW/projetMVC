@@ -1,0 +1,112 @@
+.entete4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    margin-bottom: 1%;
+    background-color: #F5F5F5;
+
+
+}
+.milieu4-4{
+    background-color: #F5F5F5;
+
+}
+.list-ref {
+    /*             border: #000000 solid 1px;
+     */         height: 72vh;
+                width: 100%;
+                display: flex;
+                 background-color: #F5F5F5;
+
+            }
+            .cards {
+    /*             border: rebeccapurple solid 4px;
+     */         flex: 4;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-left: .7%;
+            }
+            .new-ref {
+    /*             border: yellowgreen solid 4px;
+     */            display: flex;
+                position: relative;
+                height: 100%;
+                width: 25%;
+                justify-content: center;
+            }
+            .card {
+                height: 45%;
+                width: 24%;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: #000000 1 1 0 0 0.111;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            .card span {
+                align-self: flex-start;
+                margin-left: 1em;
+                font-size: 1em;
+                position: relative;
+                top: 5%;
+            }
+            .card p {
+                    font-size: 1em;
+                    z-index: 2;
+                    position: relative;
+                    top: 20%;
+                    margin-left: .5em;
+            }
+            .formulaire {
+                height: 55%;
+                width: 95%;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: #000000 1 1 0 0 0.111;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: .5em;
+                span {
+                    align-self: flex-start;
+                    margin-left: .5em;
+                    margin-top: 1em;
+                    font-weight: 800;
+                    font-size: 1.2em;
+                }
+            }
+            .formulaire label {
+                align-self: flex-start;
+                margin-left: 1em;
+                font-size: .8em;
+                margin-top: 1em;
+            }
+            .formulaire input {
+                width: 95%;
+                height: 15%;
+                padding-left: 2em;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+            .formulaire>button {
+                height: 3em;
+                width: 40%;
+                border-radius: 5px;
+                background-color: #009087;
+                color: white;
+                font-weight: 600;
+            }
+            .photo{
+                background-color: whitesmoke;
+                max-width: 200px;
+                width: 100%;
+                max-height: 150px;
+                flex-wrap: wrap;
+                position: relative;
+                top: 12%;
+            }
+          
+    

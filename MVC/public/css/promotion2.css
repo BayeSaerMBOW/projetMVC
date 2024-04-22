@@ -1,0 +1,102 @@
+.entete1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.milieu1{
+    display: block;
+}
+form{
+    width: 100%;
+    margin: 0 auto;
+    height:65vh ;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2em 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1%;
+}
+.ref{
+    margin-left: 5%;
+}
+.les_ref{
+   display: flex;
+   font-size: 1rem;
+   margin-bottom: 1%;
+}
+.les_ref input[type="checkbox"]:checked{
+   accent-color:#009088;
+   margin-right: .5%;
+}
+.les_but{
+    display: flex;
+    margin-left: 8%;
+    padding-top: 5%;
+    align-items: center;
+    
+     
+}
+.les_but a{
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+.but_back,.but_creer{
+    border: 2px solid gray;
+    width: 10%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.but_creer{
+    width: 9%;
+}
+.promo11 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.span11 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: #009088;
+    color: #FFFFFF;
+}
+.span11, .span22 {
+    margin: 1%;
+}
+.promo22 {
+    display: flex;
+    align-items: center;
+}
+.span22 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F2F6FB;
+    color: blue;
+}
+
+

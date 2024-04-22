@@ -1,0 +1,58 @@
+.milieu-pre{
+    display: block;
+}
+.entete-pre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.from-pre{
+    width: 100%;
+    margin: 0 auto;
+    height:10vh ;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2em 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.from-pre div{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 4%;
+    align-items: center;
+}
+table ,.tab-pre{
+    width: 95%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 5%;
+    font-size: 1rem;
+}
+th,
+td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.present{
+    background-color:aquamarine;
+}
+/* milieu */
+.aligner_button {
+    display: flex;
+    margin-left: 2%;
+}
+.paginate{
+    display: flex;
+}
+

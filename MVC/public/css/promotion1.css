@@ -1,0 +1,123 @@
+.entete-promo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.milieu-promo{
+    display: block;
+}
+form ,.form-promo{
+    width: 100%;
+    margin: 0 auto;
+    height:55vh ;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2em 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.libelle{
+    width: 100%;
+}
+.promo1-promo {
+    display: flex;
+    align-items: center;
+}
+
+.span1-promo {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: #009088;
+    color: #FFFFFF;
+}
+.span1-promo, .span2 {
+    margin: 1%;
+}
+.promo2 {
+    display: flex;
+    align-items: center;
+}
+.span2 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F2F6FB;
+    color: blue;
+}
+
+.input_container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.date1-promo{
+    flex-grow: 1;
+    margin-right: 3%;
+}label {
+    display: block;
+    font-weight: bold;
+    margin: 10px;
+}
+input[type="text1"] {
+    width: 96%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+input[type="date"] {
+    width: 98%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.aj-pro{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0;
+}
+.form-group{
+    padding-top: 1rem ;
+    margin-left: 4%;
+
+}
+
+.ajout{
+    background-color: #3E50B1;
+    color: #F2F6FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    height: 5vh;
+    border-radius: 10px
+}
+    
+.creer{
+    background-color: #009088;
+    color: #F2F6FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    height: 5vh;
+    border-radius: 10px
+}
+
+
+        
