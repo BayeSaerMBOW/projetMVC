@@ -9,18 +9,31 @@
            
         </div>
         <div class="contain2">
-            <span>Referentiel:</span>
-            <span>
-            <form action="" method="post">
-            <select name="referentiel" id="">
-                 <!-- <option value="status">referentiel</option> -->
-                    <?php foreach($_SESSION["tabfiltref"] as $tabfiltref):?>
-                    <option value="<?php echo $tabfiltref["nom"] ?>"><?php echo $tabfiltref["nom"] ?></option>
-                    <?php endforeach?>
-                </select>
-                  <!-- <input type="submit" value="Rafraichir"> -->
+            <!-- <span>Referentiel:</span>
+            <span> -->
+            
+                <form method="post" class="select-mutiple">
+                    <input type="hidden" name="select">
+                    <div class="select-label flex-sbc">
+                        <span class="selected-lbl">Referentiel</span>
+                        <span class="icon"><i class='bx bx-chevron-down'></i></span>
+                        <input type="checkbox" id="selected" onchange="test(this);">
+                    </div>
+                    <div class="select-content">
+
+                    <?php 
+                   /*  var_dump($_SESSION["tabfiltref"]);
+                    die(); */
+                    foreach ($_SESSION["tabfiltref"] as $refactif) : ?>
+                        <div class="option">
+                            <input type="checkbox" name="<?=$refactif['nom'] ?>">
+                            <span class="label"><?=$refactif['nom'] ?></span>
+                        </div>
+                        <?php endforeach; ?>
+                        
+                    </div>
                 </form>
-            </span>
+<!--             </span> -->
         </div>
     </div>
     <div class="form-ap">
@@ -68,6 +81,8 @@
                             $tabfiltref[] = $referent;
                         }
                     }
+                   /*  var_dump(recupnom(4));
+                    die(); */
                     if (isset($_POST['search'])) {
                         $search = $_POST['search'];
 
@@ -99,11 +114,16 @@
                             echo "</tr>";
                         }
                     } else {
+                        if(isset($_POST["select"])){
+                          $tabfiltref=filtrePlusRef($tabfiltref,array_keys($_POST));
+                           /*  die() ; */
+                        }
                         $start = 0;
                         if (isset($_GET["pageAff"])) {
                             $start = intval($_GET["pageAff"]);
                             if ($start < 0) $start = 0;
                         }
+                       
                         foreach (array_slice($tabfiltref, $start, $eleByPage) as $student) {
                             echo "<tr>";
                             echo "<td>" . $student["image"] . "</td>";
@@ -142,3 +162,13 @@
         </div>
     </div>
 </div>
+<script>
+    const selected = document.querySelector(".select-mutiple .select-content");
+    function test(e){
+        if(e.checked == false){
+            e.form.submit();
+        }else{
+            selected.style.display = "block";
+        }
+    }
+</script>

@@ -1,3 +1,4 @@
+
 <div class="part1">
     <div class="logoSA">
         <img src="<?=PATHIMG?>/Logo.png" alt="#">
@@ -5,6 +6,7 @@
     <p><span>-Menu</span></p>
 
     <ul class="liste">
+       
         <a href="?page=dash" rel=""><i class='fas fa-align-right' aria-hidden="true"></i>Dashboard</a>
         <a href="?page=pro"><i class='fas fa-clipboard-list' aria-hidden="true"></i>Promos</a>
         <a href="?page=ref"><i class='fas fa-calendar-alt' aria-hidden="true"></i>Référentiels</a>

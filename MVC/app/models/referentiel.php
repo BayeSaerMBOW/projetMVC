@@ -67,5 +67,5 @@ foreach($referentielsFiltres as $referentiels)
     $tabfiltref[]=$referentiels;
     }
 }
-session_start();
+
 $_SESSION["tabfiltref"]=$tabfiltref;

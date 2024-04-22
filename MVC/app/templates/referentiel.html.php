@@ -1,4 +1,4 @@
-
+<?php if($role == "admin") {?>
 <div class="milieu4-4">
                 <div class="entete4">
                     <div class="">Réferentiels</div>
@@ -41,3 +41,12 @@
                     </div>
                 </div>
 </div>
+<?php }else{ ?>
+    <div class="milieu4-4">
+                <div class="entete4">
+                    <div class="">Réferentiels</div>
+                    <div class="entete2" style="font-size: .8rem;">Réference*liste</div>
+                </div>
+                <h1>Vous n'avez pas accès à cette page</h1>
+    </div>
+<?php } ?>

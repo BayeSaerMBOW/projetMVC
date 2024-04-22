@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'logout'){
+    session_destroy();
+    header("Location:index.php");
+}
+//ini_set('display_errors', 'On');
 $Pages = array(
     "app" => "aprenants",
     "dash" => "dashboard",
@@ -12,12 +17,17 @@ $Pages = array(
     "pro2" => "promotion2",
 );
 
-$uri = $_REQUEST['page'];
+
+$role = "";
+if(isset($_SESSION['role'])){
+    $role = $_SESSION['role'];
+}
 
 
 include_once ("../config/config.php");
 
-if (isset($uri)) {
+if (isset($_REQUEST['page']) && !empty($role)) {
+    $uri = $_REQUEST['page'];
     if (array_key_exists($uri, $Pages)) {
         $page = $Pages[$uri];
         if ($uri == "app") {
@@ -41,6 +51,7 @@ if (isset($uri)) {
             $etudiantsPage = array_slice($student, $eleDeb, $eleByPage);
 
         }
+         
 
         if (isset($_POST['changeId'])) {
             $id = $_POST['changeId'];
@@ -70,5 +81,6 @@ if (isset($uri)) {
     }
 } else {
     include_once (YOON . "/app/templates/connexion.html.php");
+    
 }
 ?>

@@ -16,23 +16,22 @@
             <input type="text" placeholder="20 March 2024">
         </div>
 
-        <!-- <div class="imgLogin"> 
+         <div class="imgLogin"> 
 
         <div class="img">
             <img src="<?=PATHIMG?>/saer.jpg" alt="" width="40px" height="40px"
                 style="background-color: grey;border-radius: 50%;">
         </div>
-
+        
         <div class="login">
-            <div style="color: #008F87;">BAYE SAER MBOW</div>
+            <div style="color: #008F87;"><?= $_SESSION['nom']." ".$_SESSION['prenom'] ?></div>
             <div>
-                <select name="" id="">
-                    <option value="">Admin_Admin</option>
-                    <option value="">Admin_Admin</option>
-                    <option value="">Admin_Admin</option>
-                </select>
+                <?= $_SESSION["role"] ?>
             </div>
+            <a href="<?=WEBROOT?>/public/index.php?page=logout">
+                <i class="fa fa-lock"></i> Se déconecter
+            </a>
         </div>
-        <!-- </div> -->
+        </div> 
     </div>
 </div>

@@ -3,11 +3,13 @@
         <div class="">Présence</div>
         <div class="entete2" style="font-size: .8rem;">Présence*liste</div>
     </div>
-    <form action="" class="from-pre" method="post">
+    
+    <form action="index.php?page=pre" class="from-pre" method="POST">
+        <input type="hidden" name="page" value="pre">
         <div class="aligner_button">
             <div style="border: 1px solid #ccc;padding: 1%;margin-right: 2%;border-radius: 10px;">
-                <select name="statut" id="">
-                <option value="status">Status</option>
+                <select name="status" id="">
+                <option value="">Status</option>
                     <option value="present">present</option>
                     <option value="absent">absent</option>
                 </select>
@@ -16,7 +18,7 @@
             <div style="border: 1px solid #ccc;padding: 1%;margin-right: 2%;border-radius: 10px;">
 
                 <select name="referentiel" id="">
-                <option value="status">referentiel</option>
+                <option value="">referentiel</option>
                     <?php foreach($_SESSION["tabfiltref"] as $tabfiltref):?>
                     <option value="<?php echo $tabfiltref["nom"] ?>"><?php echo $tabfiltref["nom"] ?></option>
                     <?php endforeach?>
@@ -49,7 +51,8 @@
         <tbody>
             <?php
             include ("/var/www/html/Project/models/presence.php");
-            $student = readcsv();
+           
+           /*  $student = readcsv(); */
            /*  var_dump($student);
             die();
  */
@@ -71,20 +74,24 @@
 
             }
             $student=$tabfiltref;
-            if (isset($_POST['statut'])) {
-                $search = $_POST['statut'];
-                $weureEtudiant = array_filter($student, function ($studen) use ($search) {
-                    if ($studen["status"] == $search) {
-                        if ($_POST["referentiel"] == "referentiel") {
-                            return $studen;
-                        } else {
-                            if ($_POST["referentiel"] == $studen["referentiel"]) {
+            if (isset($_POST['status'])) {
+                $search = $_POST['status'];
+                $weureEtudiant = $student;
+                
+                if(!empty($search)){
+                
+                    $weureEtudiant = array_filter($student, function ($studen) use ($search) {
+                        if ($studen["status"] == $search) {
+                            if (empty($_POST["referentiel"])) {
                                 return $studen;
+                            } else {
+                                if ($_POST["referentiel"] == $studen["referentiel"]) {
+                                    return $studen;
+                                }
                             }
                         }
-                    }
-                });
-
+                    });
+                }
 
                 if (count($weureEtudiant) > 0) {
                     foreach ($weureEtudiant as $student) {
